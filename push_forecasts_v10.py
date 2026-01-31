@@ -7,6 +7,8 @@ import json
 import math
 import sys
 import os
+import argparse
+from datetime import datetime
 
 # Import logical components
 sys.path.append(os.getcwd())
@@ -21,7 +23,7 @@ from production_engine import (
 
 DB_NAME = "tjk_races.db"
 
-def generate_and_push_forecasts(target_date):
+def generate_and_push_forecasts(target_date, all_cities=False):
     print(f"\n🔮 KAHIN v10: Generating Forecasts for {target_date}")
     print("=" * 70)
     
@@ -51,17 +53,22 @@ def generate_and_push_forecasts(target_date):
         
     cities = pr_df['city'].unique()
     
-    # Filter for Turkish Cities Only (User Request)
-    tr_cities = ['İstanbul', 'Ankara', 'İzmir', 'Adana', 'Bursa', 'Kocaeli', 'Şanlıurfa', 'Diyarbakır', 'Antalya', 'Elazığ']
+    # Filter for Turkish Cities
+    tr_city_names = ['İstanbul', 'Ankara', 'İzmir', 'Adana', 'Bursa', 'Kocaeli', 'Şanlıurfa', 'Diyarbakır', 'Antalya', 'Elazığ']
     
-    filtered_cities = []
-    for c in cities:
-        # Check if any TR city name is in the string (e.g. "İzmir (8. Y.G.)")
-        if any(tr_c in c for tr_c in tr_cities):
-            filtered_cities.append(c)
+    if all_cities:
+        # Process ALL Turkish cities found in program
+        filtered_cities = [c for c in cities if any(tr_c in c for tr_c in tr_city_names)]
+        print(f"🌍 All-Cities Mode: Processing {len(filtered_cities)} TR cities")
+    else:
+        # Manual selection (legacy behavior)
+        filtered_cities = []
+        for c in cities:
+            if any(tr_c in c for tr_c in tr_city_names):
+                filtered_cities.append(c)
             
-    print(f"🌍 All Cities: {cities}")
-    print(f"🇹🇷 TR Cities: {filtered_cities}")
+    print(f"🌍 Available Cities: {list(cities)}")
+    print(f"🇹🇷 Selected TR Cities: {filtered_cities}")
     
     sql_statements = []
     
@@ -332,4 +339,21 @@ def generate_and_push_forecasts(target_date):
         print("\n⚠️ No coupons generated.")
 
 if __name__ == "__main__":
-    generate_and_push_forecasts("19/01/2026")
+    parser = argparse.ArgumentParser(description='Generate horse racing forecasts')
+    parser.add_argument('--date', type=str, default=None,
+                        help='Target date in DD/MM/YYYY format (default: today)')
+    parser.add_argument('--all-cities', action='store_true',
+                        help='Process all Turkish cities automatically')
+    
+    args = parser.parse_args()
+    
+    # Determine target date
+    if args.date:
+        target_date = args.date
+    else:
+        target_date = datetime.now().strftime("%d/%m/%Y")
+    
+    print(f"📅 Target Date: {target_date}")
+    print(f"🌍 All Cities Mode: {args.all_cities}")
+    
+    generate_and_push_forecasts(target_date, all_cities=args.all_cities)

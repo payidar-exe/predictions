@@ -3,6 +3,7 @@ import { useParams, Link, useSearchParams } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import type { Coupon } from '../lib/supabase';
 import { useAuthStore, useCouponStore } from '../stores';
+import { AdWatchModal } from '../components/AdWatchModal';
 
 export function CouponDetailPage() {
     const { id } = useParams<{ id: string }>();
@@ -10,6 +11,11 @@ export function CouponDetailPage() {
     const [coupon, setCoupon] = useState<Coupon | null>(null);
     const [isLoading, setIsLoading] = useState(true);
     const [showUnlockModal, setShowUnlockModal] = useState(searchParams.get('unlock') === 'true');
+
+    // Per-leg ad unlock state
+    const [unlockedLegs, setUnlockedLegs] = useState<Set<number>>(new Set());
+    const [isAdOpen, setIsAdOpen] = useState(false);
+    const [pendingLegIndex, setPendingLegIndex] = useState<number | null>(null);
 
     const user = useAuthStore((s) => s.user);
     const updateStarBalance = useAuthStore((s) => s.updateStarBalance);
@@ -28,6 +34,33 @@ export function CouponDetailPage() {
         };
         fetchCoupon();
     }, [id]);
+
+    // Sync per-leg unlock state from localStorage
+    useEffect(() => {
+        if (!coupon || !id) return;
+        const today = new Date().toISOString().split('T')[0];
+        const unlocked = new Set<number>();
+        coupon.legs?.forEach((_, i) => {
+            if (localStorage.getItem(`leg_${id}_${i}_${today}`) === 'true') {
+                unlocked.add(i);
+            }
+        });
+        setUnlockedLegs(unlocked);
+    }, [coupon, id]);
+
+    // Handle ad reward for leg unlock
+    const handleLegAdReward = () => {
+        if (pendingLegIndex !== null && id) {
+            const today = new Date().toISOString().split('T')[0];
+            localStorage.setItem(`leg_${id}_${pendingLegIndex}_${today}`, 'true');
+            setUnlockedLegs(prev => {
+                const next = new Set(prev);
+                next.add(pendingLegIndex);
+                return next;
+            });
+            setPendingLegIndex(null);
+        }
+    };
 
     const handleUnlock = async () => {
         if (!coupon || !user || !canAfford) return;
@@ -100,31 +133,130 @@ export function CouponDetailPage() {
                             <span className="text-gray-400 text-xs font-medium">{coupon.date}</span>
                         </div>
                         <h2 className="text-2xl font-extrabold text-white mb-1">{coupon.title}</h2>
-                        <p className="text-primary text-xs font-bold uppercase tracking-widest">{coupon.subtitle}</p>
+                        {/* Hide cost in subtitle when not purchased */}
+                        {isPurchased && <p className="text-primary text-xs font-bold uppercase tracking-widest">{coupon.subtitle}</p>}
                     </div>
                 </div>
 
-                {/* Locked State */}
+                {/* Per-Leg View (Not Purchased - Free with Ads) */}
                 {!isPurchased && (
-                    <div className="bg-gradient-to-b from-card-dark to-black/40 border border-white/5 rounded-2xl p-8 flex flex-col items-center text-center shadow-lg">
-                        <div className="size-20 bg-accent-gold/10 rounded-full flex items-center justify-center mb-6 border border-accent-gold/20 shadow-[0_0_30px_rgba(255,215,0,0.1)]">
-                            <span className="material-symbols-outlined text-accent-gold text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>lock</span>
+                    <div className="space-y-6">
+                        {/* Info Banner */}
+                        <div className="bg-gradient-to-r from-primary/10 to-accent-gold/10 border border-primary/20 rounded-xl p-4 flex items-start gap-3">
+                            <span className="material-symbols-outlined text-primary text-xl mt-0.5">play_circle</span>
+                            <div>
+                                <p className="text-white font-bold text-sm">1 Koşu Ücretsiz!</p>
+                                <p className="text-gray-400 text-xs">Reklam izleyerek 1 koşunun favorisini ücretsiz görebilirsin.</p>
+                            </div>
                         </div>
-                        <h3 className="text-xl font-bold text-white mb-2">Profesyonel Analiz</h3>
-                        <p className="text-gray-400 text-sm mb-8 leading-relaxed">
-                            Bu analizde jokey performansları, son 6 yarış istatistikleri ve Kahin AI'nın özel notları bulunmaktadır.
-                        </p>
+
+                        {/* Star Unlock Option */}
                         <button
                             onClick={() => setShowUnlockModal(true)}
-                            className="w-full bg-accent-gold hover:bg-accent-gold/90 text-background-dark py-4 rounded-xl font-bold text-lg shadow-lg flex items-center justify-center gap-2 transition-transform active:scale-95"
+                            className="w-full bg-accent-gold/10 hover:bg-accent-gold/20 text-accent-gold border border-accent-gold/20 py-3 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-colors"
                         >
-                            <span className="material-symbols-outlined">key</span>
-                            {coupon.star_cost} Yıldız ile Aç
+                            <span className="material-symbols-outlined text-lg" style={{ fontVariationSettings: "'FILL' 1" }}>stars</span>
+                            {coupon.star_cost} Yıldız ile Tümünü Aç
                         </button>
+
+                        {/* Per-Leg Cards */}
+                        {coupon.legs?.map((leg, index) => {
+                            const isLegUnlocked = unlockedLegs.has(index);
+                            const topHorse = leg.horses[0]; // Get the top horse (favori)
+
+                            return (
+                                <div key={index} className="bg-card-dark border border-white/5 rounded-2xl overflow-hidden shadow-lg relative">
+                                    {/* Leg Header - Always Visible */}
+                                    <div className="bg-white/5 px-5 py-3 border-b border-white/5 flex items-center justify-between">
+                                        <div className="flex items-center gap-3">
+                                            <div className="size-8 rounded-lg flex items-center justify-center font-bold text-lg bg-primary text-white shadow-lg shadow-primary/20">
+                                                {leg.leg_no}
+                                            </div>
+                                            <div className="flex flex-col leading-none">
+                                                <span className="text-white font-bold text-base">. Koşu</span>
+                                                <span className="text-xs text-gray-500 font-medium mt-0.5">{leg.race_time}</span>
+                                            </div>
+                                        </div>
+                                        <div className="text-right">
+                                            <div className="text-xs font-bold text-gray-300 uppercase">{leg.race_info || 'Şartlı'}</div>
+                                            <div className="text-[10px] text-gray-500">{leg.field_size} Atlı</div>
+                                        </div>
+                                    </div>
+
+                                    {/* Locked Content */}
+                                    {!isLegUnlocked && (
+                                        <div className="p-6 flex flex-col items-center text-center">
+                                            <div className="size-12 bg-primary/10 rounded-full flex items-center justify-center mb-3 animate-pulse">
+                                                <span className="material-symbols-outlined text-primary text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>lock</span>
+                                            </div>
+                                            {/* Check if limit reached (1 leg max via ad) */}
+                                            {unlockedLegs.size >= 1 ? (
+                                                <>
+                                                    <p className="text-gray-400 text-sm mb-2">Ücretsiz hakkını kullandın!</p>
+                                                    <p className="text-gray-500 text-xs mb-4">Diğer koşuları görmek için yıldız ile aç.</p>
+                                                    <button
+                                                        onClick={() => setShowUnlockModal(true)}
+                                                        className="bg-accent-gold/20 hover:bg-accent-gold/30 text-accent-gold px-6 py-2.5 rounded-lg font-bold text-sm flex items-center gap-2 transition-all border border-accent-gold/30"
+                                                    >
+                                                        <span className="material-symbols-outlined text-lg" style={{ fontVariationSettings: "'FILL' 1" }}>stars</span>
+                                                        Yıldız ile Aç
+                                                    </button>
+                                                </>
+                                            ) : (
+                                                <>
+                                                    <p className="text-gray-400 text-sm mb-4">Bu koşunun favorisini görmek için reklam izle</p>
+                                                    <button
+                                                        onClick={() => {
+                                                            setPendingLegIndex(index);
+                                                            setIsAdOpen(true);
+                                                        }}
+                                                        className="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg font-bold text-sm flex items-center gap-2 transition-all hover:scale-105 shadow-lg shadow-primary/25"
+                                                    >
+                                                        <span className="material-symbols-outlined text-lg">play_circle</span>
+                                                        İzle & Aç
+                                                    </button>
+                                                </>
+                                            )}
+                                        </div>
+                                    )}
+
+                                    {/* Unlocked - Show Top Horse Only */}
+                                    {isLegUnlocked && topHorse && (
+                                        <div className="p-4 bg-gradient-to-r from-primary/5 to-transparent">
+                                            <div className="flex items-center gap-3 mb-2">
+                                                <span className="bg-primary/20 text-primary text-[10px] font-bold px-2 py-0.5 rounded flex items-center gap-1">
+                                                    <span className="material-symbols-outlined text-[12px]" style={{ fontVariationSettings: "'FILL' 1" }}>verified</span>
+                                                    FAVORİ
+                                                </span>
+                                                <span className="text-green-400 text-[10px] flex items-center gap-1">
+                                                    <span className="material-symbols-outlined text-[12px]">check_circle</span>
+                                                    Açıldı
+                                                </span>
+                                            </div>
+                                            <div className="flex items-center gap-4">
+                                                <div className="size-14 rounded-full border-2 border-primary/30 flex items-center justify-center bg-black/30">
+                                                    <span className="text-lg font-black text-primary">{topHorse.ai_score || 85}</span>
+                                                </div>
+                                                <div className="flex-1">
+                                                    <h4 className="text-xl font-bold text-white">{topHorse.horse_name}</h4>
+                                                    <p className="text-xs text-gray-400 flex items-center gap-1 mt-1">
+                                                        <span className="material-symbols-outlined text-[14px]">person</span>
+                                                        {topHorse.jockey_name || '-'}
+                                                    </p>
+                                                    {topHorse.ai_note && (
+                                                        <p className="text-xs text-gray-500 mt-2 italic">"{topHorse.ai_note}"</p>
+                                                    )}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
+                            );
+                        })}
                     </div>
                 )}
 
-                {/* Unlocked Content */}
+                {/* Unlocked Content - Full Access */}
                 {isPurchased && (
                     <div className="space-y-6">
                         {coupon.legs?.map((leg, index) => {
@@ -249,7 +381,17 @@ export function CouponDetailPage() {
                 )}
             </main>
 
-            {/* Modal Logic (Using same simple modal for verifying) */}
+            {/* Ad Watch Modal for Per-Leg Unlock */}
+            <AdWatchModal
+                isOpen={isAdOpen}
+                onClose={() => {
+                    setIsAdOpen(false);
+                    setPendingLegIndex(null);
+                }}
+                onReward={handleLegAdReward}
+            />
+
+            {/* Star Unlock Modal */}
             {showUnlockModal && (
                 <div className="fixed inset-0 z-[60] bg-black/80 backdrop-blur-sm flex items-end justify-center">
                     <div className="w-full max-w-md bg-zinc-900 rounded-t-3xl border-t border-white/10 p-6 pb-12 animate-in slide-in-from-bottom duration-300">
