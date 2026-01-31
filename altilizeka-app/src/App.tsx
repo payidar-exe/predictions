@@ -17,6 +17,8 @@ import { MyCouponsPage } from './pages/MyCouponsPage';
 import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
 import { TermsPage } from './pages/TermsPage';
 import { OnboardingPage } from './pages/OnboardingPage';
+import { FAQPage } from './pages/FAQPage';
+import { AccountDeletionPage } from './pages/AccountDeletionPage';
 
 import './index.css';
 
@@ -123,13 +125,12 @@ function App() {
 
         {/* Placeholder Routes */}
         <Route path="/star-history" element={<AuthGuard><PlaceholderPage title="Yıldız Geçmişi" /></AuthGuard>} />
-        <Route path="/notifications" element={<AuthGuard><PlaceholderPage title="Bildirimler" /></AuthGuard>} />
-        <Route path="/help" element={<AuthGuard><PlaceholderPage title="Yardım" /></AuthGuard>} />
-        <Route path="/about" element={<AuthGuard><PlaceholderPage title="Hakkında" /></AuthGuard>} />
 
-        {/* Legal Pages */}
+        {/* Legal & Support Pages */}
         <Route path="/privacy" element={<PrivacyPolicyPage />} />
         <Route path="/terms" element={<TermsPage />} />
+        <Route path="/faq" element={<AuthGuard><FAQPage /></AuthGuard>} />
+        <Route path="/account-deletion" element={<AuthGuard><AccountDeletionPage /></AuthGuard>} />
       </Routes>
     </BrowserRouter>
   );

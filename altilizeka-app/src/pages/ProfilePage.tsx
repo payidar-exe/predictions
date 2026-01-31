@@ -15,9 +15,13 @@ export function ProfilePage() {
     const menuItems = [
         { icon: 'receipt_long', label: 'Satın Aldığım Kuponlar', path: '/my-coupons' },
         { icon: 'history', label: 'Yıldız Geçmişi', path: '/star-history' },
-        { icon: 'notifications', label: 'Bildirim Ayarları', path: '/notifications' },
-        { icon: 'help_outline', label: 'Yardım & Destek', path: '/help' },
-        { icon: 'info', label: 'Hakkında', path: '/about' },
+        { icon: 'help_outline', label: 'Sık Sorulan Sorular', path: '/faq' },
+        { icon: 'privacy_tip', label: 'Gizlilik Politikası', path: '/privacy' },
+        { icon: 'description', label: 'Kullanım Koşulları', path: '/terms' },
+    ];
+
+    const dangerItems = [
+        { icon: 'delete_forever', label: 'Hesabı Sil', path: '/account-deletion', danger: true },
     ];
 
     return (
@@ -86,11 +90,26 @@ export function ProfilePage() {
                 ))}
             </div>
 
+            {/* Danger Zone */}
+            <div className="mx-4 mt-4 bg-card-dark rounded-2xl border border-red-500/20 overflow-hidden">
+                {dangerItems.map((item) => (
+                    <Link
+                        key={item.path}
+                        to={item.path}
+                        className="flex items-center gap-4 px-6 py-4 hover:bg-red-500/10 transition-colors"
+                    >
+                        <span className="material-symbols-outlined text-red-400">{item.icon}</span>
+                        <span className="flex-1 text-red-400 font-medium">{item.label}</span>
+                        <span className="material-symbols-outlined text-red-400/50">chevron_right</span>
+                    </Link>
+                ))}
+            </div>
+
             {/* Logout Button */}
             <div className="mx-4 mt-6">
                 <button
                     onClick={handleSignOut}
-                    className="w-full bg-red-500/10 hover:bg-red-500/20 border border-red-500/30 text-red-400 py-4 rounded-xl font-semibold flex items-center justify-center gap-2 transition-colors"
+                    className="w-full bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300 py-4 rounded-xl font-semibold flex items-center justify-center gap-2 transition-colors"
                 >
                     <span className="material-symbols-outlined">logout</span>
                     <span>Çıkış Yap</span>
