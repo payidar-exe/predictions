@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="tr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#007a5c",
+                        "accent-gold": "#C29D46",
+                        "background-light": "#f3f3f1",
+                        "background-dark": "#121416",
+                        "card-dark": "#1D2024",
+                    },
+                    fontFamily: {
+                        "display": ["Epilogue", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Epilogue', sans-serif;
+        }
+
+        .ios-blur {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-white antialiased overflow-hidden">
+    <!-- Background Mockup (Simulating the blurred home screen) -->
+    <div class="fixed inset-0 z-0 flex flex-col p-4 opacity-40 grayscale pointer-events-none">
+        <div class="flex justify-between items-center mb-6">
+            <div class="h-8 w-32 bg-gray-700 rounded"></div>
+            <div class="h-10 w-10 bg-gray-700 rounded-full"></div>
+        </div>
+        <div class="space-y-4">
+            <div class="h-40 bg-gray-800 rounded-xl w-full"></div>
+            <div class="h-40 bg-gray-800 rounded-xl w-full"></div>
+            <div class="h-40 bg-gray-800 rounded-xl w-full"></div>
+        </div>
+    </div>
+    <!-- Modal Backdrop -->
+    <div class="fixed inset-0 z-10 bg-black/60 ios-blur flex items-end justify-center">
+        <!-- Bottom Sheet Container -->
+        <div
+            class="w-full max-w-md bg-background-dark rounded-t-2xl shadow-2xl border-t border-white/10 flex flex-col items-stretch animate-in slide-in-from-bottom duration-300">
+            <!-- BottomSheetHandle -->
+            <button class="flex h-6 w-full items-center justify-center pt-2">
+                <div class="h-1.5 w-12 rounded-full bg-white/20"></div>
+            </button>
+            <!-- SectionHeader -->
+            <div class="pt-2">
+                <h4
+                    class="text-primary text-sm font-bold leading-normal tracking-[0.05em] px-4 py-2 text-center uppercase">
+                    Kupon Satın Alma Onayı</h4>
+            </div>
+            <!-- Content Area -->
+            <div class="px-6 py-4 flex flex-col items-center">
+                <!-- Icon/Illustration -->
+                <div
+                    class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mb-6 border border-primary/20">
+                    <span class="material-symbols-outlined text-primary text-5xl"
+                        style="font-variation-settings: 'FILL' 1">stars</span>
+                </div>
+                <!-- HeadlineText -->
+                <h3 class="text-white tracking-tight text-2xl font-bold leading-tight text-center pb-6">
+                    Bu kuponu <span class="text-primary">50 Yıldız</span> karşılığında açmak istiyor musunuz?
+                </h3>
+                <!-- Stats / Balance Card -->
+                <div
+                    class="w-full bg-card-dark border border-white/5 rounded-2xl p-4 mb-8 flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <div class="bg-accent-gold/20 p-2 rounded-lg">
+                            <span
+                                class="material-symbols-outlined text-accent-gold text-2xl">account_balance_wallet</span>
+                        </div>
+                        <div>
+                            <p class="text-white/50 text-xs font-medium uppercase tracking-wider">Mevcut Bakiyeniz</p>
+                            <p class="text-white text-lg font-bold leading-none">150 Yıldız</p>
+                        </div>
+                    </div>
+                    <div class="h-8 w-0.5 bg-white/10"></div>
+                    <div class="text-right">
+                        <p class="text-white/50 text-xs font-medium uppercase tracking-wider">İşlem Sonrası</p>
+                        <p class="text-primary text-lg font-bold leading-none">100 Yıldız</p>
+                    </div>
+                </div>
+                <!-- ButtonGroup -->
+                <div class="flex flex-col w-full gap-3 pb-8">
+                    <button
+                        class="flex items-center justify-center rounded-xl h-14 bg-primary hover:bg-primary/90 transition-colors text-white text-lg font-bold w-full shadow-lg shadow-primary/20">
+                        <span class="truncate">Kuponu Aç</span>
+                    </button>
+                    <button
+                        class="flex items-center justify-center rounded-xl h-14 bg-transparent hover:bg-white/5 transition-colors text-white/60 text-base font-semibold w-full">
+                        <span class="truncate">Vazgeç</span>
+                    </button>
+                </div>
+                <!-- Footer Note -->
+                <p class="text-white/30 text-[11px] text-center px-8 pb-4">
+                    Satın alınan kuponlar 'Kuponlarım' sekmesine eklenir ve dilediğiniz zaman erişilebilir kalır.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Safe Area Background for iOS -->
+    <div class="fixed bottom-0 w-full h-8 bg-background-dark"></div>
+</body>
+
+</html>

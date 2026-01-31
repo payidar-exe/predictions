@@ -1,0 +1,1105 @@
+[
+  {
+    "date": "11/01/2026",
+    "city": "Gulfstream Park ABD",
+    "cost": 720.0,
+    "is_win": true,
+    "legs": [
+      {
+        "race_no": 4,
+        "selection": [
+          "MUSICAL DESIGN",
+          "GARUDA",
+          "LUCY'S COOKIE",
+          "BONITA DIAMOND"
+        ],
+        "winner": "MUSICAL DESIGN",
+        "hit": true
+      },
+      {
+        "race_no": 5,
+        "selection": [
+          "BANKER'S JET",
+          "WIN STREET"
+        ],
+        "winner": "BANKER'S JET",
+        "hit": true
+      },
+      {
+        "race_no": 6,
+        "selection": [
+          "PET MAT",
+          "SAYBROOK",
+          "GALLANT KNIGHT"
+        ],
+        "winner": "PET MAT",
+        "hit": true
+      },
+      {
+        "race_no": 7,
+        "selection": [
+          "VALID SENSE",
+          "IDENTITY CRISIS",
+          "LAMCARO"
+        ],
+        "winner": "VALID SENSE",
+        "hit": true
+      },
+      {
+        "race_no": 8,
+        "selection": [
+          "BOAT'S A ROCKIN",
+          "ARTEMUS CITYLIMITS"
+        ],
+        "winner": "BOAT'S A ROCKIN",
+        "hit": true
+      },
+      {
+        "race_no": 9,
+        "selection": [
+          "ST. OLAF ROSE",
+          "NEOM CITY",
+          "GIRVIN STAR",
+          "BRENNA"
+        ],
+        "winner": "ST. OLAF ROSE",
+        "hit": true
+      }
+    ]
+  },
+  {
+    "date": "11/01/2026",
+    "city": "Sam Houston ABD",
+    "cost": 720.0,
+    "is_win": true,
+    "legs": [
+      {
+        "race_no": 3,
+        "selection": [
+          "FALCON QUEST",
+          "CAUSE IM THE KING",
+          "THE BIRDMAN"
+        ],
+        "winner": "FALCON QUEST",
+        "hit": true
+      },
+      {
+        "race_no": 4,
+        "selection": [
+          "BIG TIME CHARLIE",
+          "WON MORE TIME",
+          "DR SKYSCRAPER",
+          "SIP AND GO"
+        ],
+        "winner": "BIG TIME CHARLIE",
+        "hit": true
+      },
+      {
+        "race_no": 5,
+        "selection": [
+          "MAYBE DOLCIE"
+        ],
+        "winner": "MAYBE DOLCIE",
+        "hit": true
+      },
+      {
+        "race_no": 6,
+        "selection": [
+          "BLUE HEAVENLY",
+          "CATCHING HEAT",
+          "GLORYIBEE",
+          "AMADORA'S EMPIRE"
+        ],
+        "winner": "BLUE HEAVENLY",
+        "hit": true
+      },
+      {
+        "race_no": 7,
+        "selection": [
+          "MINTASTIC",
+          "POKERKNIGHTATVEES",
+          "JUSTICE DEPARTMENT",
+          "SCHIFTY'S HALOID",
+          "RIVETAGE",
+          "PROVEN ADVOCATE"
+        ],
+        "winner": "MINTASTIC",
+        "hit": true
+      },
+      {
+        "race_no": 8,
+        "selection": [
+          "GOLDEN PELICAN",
+          "COURTINBYMOONLIGHT"
+        ],
+        "winner": "GOLDEN PELICAN",
+        "hit": true
+      }
+    ]
+  },
+  {
+    "date": "11/01/2026",
+    "city": "Santa Anita Park ABD",
+    "cost": 700.0,
+    "is_win": true,
+    "legs": [
+      {
+        "race_no": 3,
+        "selection": [
+          "BALLYHOOLIGAN",
+          "BAZOOKA CHARLIE",
+          "MAXIMUS",
+          "HONDO CROUCH",
+          "MAGIC CONNECTION",
+          "ANOTHER MONARCH",
+          "SMILING TIZZY"
+        ],
+        "winner": "BALLYHOOLIGAN",
+        "hit": true
+      },
+      {
+        "race_no": 4,
+        "selection": [
+          "YOURS SINCERELY",
+          "STUFFY MIST"
+        ],
+        "winner": "YOURS SINCERELY",
+        "hit": true
+      },
+      {
+        "race_no": 5,
+        "selection": [
+          "MARGARITA GIRL",
+          "OOTY",
+          "THERMAL",
+          "MAWU",
+          "NO BAD BEATS"
+        ],
+        "winner": "MARGARITA GIRL",
+        "hit": true
+      },
+      {
+        "race_no": 6,
+        "selection": [
+          "WATSONVILLE",
+          "SON OF A BIRCH"
+        ],
+        "winner": "WATSONVILLE",
+        "hit": true
+      },
+      {
+        "race_no": 7,
+        "selection": [
+          "IRINA'S CHARM",
+          "NO CAP",
+          "BOLT D'VINE",
+          "OUR MOONLIGHT"
+        ],
+        "winner": "IRINA'S CHARM",
+        "hit": true
+      },
+      {
+        "race_no": 8,
+        "selection": [
+          "QUEEN MAXIMA"
+        ],
+        "winner": "QUEEN MAXIMA",
+        "hit": true
+      }
+    ]
+  },
+  {
+    "date": "11/01/2026",
+    "city": "Scottsville Guney Afrika",
+    "cost": 1.25,
+    "is_win": false,
+    "legs": [
+      {
+        "race_no": 4,
+        "selection": [
+          "Kapalı gözlük takılacağını ifade eder."
+        ],
+        "winner": "Kapalı gözlük takılacağını ifade eder.",
+        "hit": true
+      },
+      {
+        "race_no": 5,
+        "selection": [
+          "Kapalı gözlük takılacağını ifade eder."
+        ],
+        "winner": "Unknown",
+        "hit": false
+      },
+      {
+        "race_no": 6,
+        "selection": [
+          "Kapalı gözlük takılacağını ifade eder."
+        ],
+        "winner": "Unknown",
+        "hit": false
+      },
+      {
+        "race_no": 7,
+        "selection": [
+          "Kapalı gözlük takılacağını ifade eder."
+        ],
+        "winner": "Unknown",
+        "hit": false
+      },
+      {
+        "race_no": 8,
+        "selection": [
+          "Kapalı gözlük takılacağını ifade eder."
+        ],
+        "winner": "Unknown",
+        "hit": false
+      },
+      {
+        "race_no": 9,
+        "selection": [
+          "Kapalı gözlük takılacağını ifade eder."
+        ],
+        "winner": "Unknown",
+        "hit": false
+      }
+    ]
+  },
+  {
+    "date": "11/01/2026",
+    "city": "Sha Tin Hong Kong",
+    "cost": 1.25,
+    "is_win": false,
+    "legs": [
+      {
+        "race_no": 4,
+        "selection": [
+          "Kapalı gözlük takılacağını ifade eder."
+        ],
+        "winner": "Unknown",
+        "hit": false
+      },
+      {
+        "race_no": 5,
+        "selection": [
+          "Yanak peluşu takılacağını ifade eder."
+        ],
+        "winner": "Dilinin bağlanacağını ifade eder.",
+        "hit": false
+      },
+      {
+        "race_no": 6,
+        "selection": [
+          "Dilinin bağlanacağını ifade eder."
+        ],
+        "winner": "Dilinin bağlanacağını ifade eder.",
+        "hit": true
+      },
+      {
+        "race_no": 7,
+        "selection": [
+          "Yanak peluşu takılacağını ifade eder."
+        ],
+        "winner": "Yanak peluşu takılacağını ifade eder.",
+        "hit": true
+      },
+      {
+        "race_no": 8,
+        "selection": [
+          "Yanak peluşu takılacağını ifade eder."
+        ],
+        "winner": "Yanak peluşu takılacağını ifade eder.",
+        "hit": true
+      },
+      {
+        "race_no": 9,
+        "selection": [
+          "Yanak peluşu takılacağını ifade eder."
+        ],
+        "winner": "Unknown",
+        "hit": false
+      }
+    ]
+  },
+  {
+    "date": "11/01/2026",
+    "city": "İzmir  (6. Y.G.)",
+    "cost": 630.0,
+    "is_win": true,
+    "legs": [
+      {
+        "race_no": 3,
+        "selection": [
+          "JUNIOR BAŞKAN",
+          "HUMAN TORCH",
+          "BOCCE"
+        ],
+        "winner": "JUNIOR BAŞKAN",
+        "hit": true
+      },
+      {
+        "race_no": 4,
+        "selection": [
+          "REYHAN GELİN",
+          "BENDEME",
+          "EĞİLCE",
+          "AHUU ATA"
+        ],
+        "winner": "EĞİLCE",
+        "hit": true
+      },
+      {
+        "race_no": 5,
+        "selection": [
+          "ARLİN SU"
+        ],
+        "winner": "ARLİN SU",
+        "hit": true
+      },
+      {
+        "race_no": 6,
+        "selection": [
+          "KRALIN DANSI",
+          "PERS JOYS",
+          "SHARP STORM",
+          "CANVELO",
+          "LION TOMO",
+          "TEJON MELERO",
+          "ÇELİK MENGENE"
+        ],
+        "winner": "KRALIN DANSI",
+        "hit": true
+      },
+      {
+        "race_no": 7,
+        "selection": [
+          "STORM QUEEN",
+          "BLACK SHARK",
+          "ÖNDERBEYİM"
+        ],
+        "winner": "BLACK SHARK",
+        "hit": true
+      },
+      {
+        "race_no": 8,
+        "selection": [
+          "KILIÇ OSMAN",
+          "DİRLİK"
+        ],
+        "winner": "KILIÇ OSMAN",
+        "hit": true
+      }
+    ]
+  },
+  {
+    "date": "12/01/2026",
+    "city": "Bursa  (3. Y.G.)",
+    "cost": 700.0,
+    "is_win": true,
+    "legs": [
+      {
+        "race_no": 2,
+        "selection": [
+          "ŞAHLANTAY",
+          "HIZLI EREN"
+        ],
+        "winner": "ŞAHLANTAY",
+        "hit": true
+      },
+      {
+        "race_no": 3,
+        "selection": [
+          "CENTURIES VICTORY",
+          "CANFEDA GÜÇLÜBEY"
+        ],
+        "winner": "CENTURIES VICTORY",
+        "hit": true
+      },
+      {
+        "race_no": 4,
+        "selection": [
+          "KOÇARSLAN",
+          "BY TÜRE"
+        ],
+        "winner": "KOÇARSLAN",
+        "hit": true
+      },
+      {
+        "race_no": 5,
+        "selection": [
+          "ŞEN AKYÜZ",
+          "ALONE WOLF",
+          "HANÖMER",
+          "BORN TO RUN",
+          "WILD DANGER",
+          "LION OF HONOUR",
+          "BLACK GALAXY"
+        ],
+        "winner": "ALONE WOLF",
+        "hit": true
+      },
+      {
+        "race_no": 6,
+        "selection": [
+          "HIZLI VEYSEL",
+          "HULKİ",
+          "CANMETE",
+          "ŞAHSEKİN",
+          "HIZLI ÇOCUK"
+        ],
+        "winner": "HULKİ",
+        "hit": true
+      },
+      {
+        "race_no": 7,
+        "selection": [
+          "KINOWA GIRL",
+          "VERONA SPRING"
+        ],
+        "winner": "KINOWA GIRL",
+        "hit": true
+      }
+    ]
+  },
+  {
+    "date": "12/01/2026",
+    "city": "Cagnes Sur Mer Fransa",
+    "cost": 1.25,
+    "is_win": false,
+    "legs": [
+      {
+        "race_no": 2,
+        "selection": [
+          "Yanak peluşu takılacağını ifade eder."
+        ],
+        "winner": "Yanak peluşu takılacağını ifade eder.",
+        "hit": true
+      },
+      {
+        "race_no": 3,
+        "selection": [
+          "Dilinin bağlanacağını ifade eder."
+        ],
+        "winner": "Unknown",
+        "hit": false
+      },
+      {
+        "race_no": 4,
+        "selection": [
+          "Dilinin bağlanacağını ifade eder."
+        ],
+        "winner": "Unknown",
+        "hit": false
+      },
+      {
+        "race_no": 5,
+        "selection": [
+          "Kapalı gözlük takılacağını ifade eder."
+        ],
+        "winner": "Unknown",
+        "hit": false
+      },
+      {
+        "race_no": 6,
+        "selection": [
+          "Kapalı gözlük takılacağını ifade eder."
+        ],
+        "winner": "Kapalı gözlük takılacağını ifade eder.",
+        "hit": true
+      },
+      {
+        "race_no": 7,
+        "selection": [
+          "Kapalı gözlük takılacağını ifade eder."
+        ],
+        "winner": "Unknown",
+        "hit": false
+      }
+    ]
+  },
+  {
+    "date": "12/01/2026",
+    "city": "Lingfield Birleşik Krallık",
+    "cost": 720.0,
+    "is_win": true,
+    "legs": [
+      {
+        "race_no": 2,
+        "selection": [
+          "NUNC EST BIBENDUM",
+          "YOUNG ENDLESS"
+        ],
+        "winner": "NUNC EST BIBENDUM",
+        "hit": true
+      },
+      {
+        "race_no": 3,
+        "selection": [
+          "TENBOB TOMMY",
+          "ALASRAE",
+          "CHARGING BULL",
+          "COMPRADOR"
+        ],
+        "winner": "TENBOB TOMMY",
+        "hit": true
+      },
+      {
+        "race_no": 4,
+        "selection": [
+          "BEAUZON",
+          "CALL GLORY",
+          "SARABI",
+          "AUTUMN ANGEL"
+        ],
+        "winner": "BEAUZON",
+        "hit": true
+      },
+      {
+        "race_no": 5,
+        "selection": [
+          "MIGHTY RULER",
+          "JACKSON STREET"
+        ],
+        "winner": "MIGHTY RULER",
+        "hit": true
+      },
+      {
+        "race_no": 6,
+        "selection": [
+          "CELTIC JOHN",
+          "ROYAL JET",
+          "MONKS MEAD"
+        ],
+        "winner": "CELTIC JOHN",
+        "hit": true
+      },
+      {
+        "race_no": 7,
+        "selection": [
+          "FORESEEN",
+          "H KEY LAILS",
+          "DANDY KHAN"
+        ],
+        "winner": "FORESEEN",
+        "hit": true
+      }
+    ]
+  },
+  {
+    "date": "12/01/2026",
+    "city": "Şanlıurfa  (3. Y.G.)",
+    "cost": 720.0,
+    "is_win": false,
+    "legs": [
+      {
+        "race_no": 2,
+        "selection": [
+          "AKOLHAN",
+          "GÜZELMİNE",
+          "KÜÇÜKCEVER"
+        ],
+        "winner": "AKOLHAN",
+        "hit": true
+      },
+      {
+        "race_no": 3,
+        "selection": [
+          "BERATKIZ",
+          "DENGİZ EFSANESİ",
+          "MERHAMET",
+          "KARAZEMİN GÜLÜ"
+        ],
+        "winner": "KARAZEMİN GÜLÜ",
+        "hit": true
+      },
+      {
+        "race_no": 4,
+        "selection": [
+          "DAR SOKAK",
+          "PIRATE OF THE SEA",
+          "KING OVA",
+          "ADOLFO OGEL"
+        ],
+        "winner": "DAR SOKAK",
+        "hit": true
+      },
+      {
+        "race_no": 5,
+        "selection": [
+          "MERYEM SULTAN",
+          "SAKLIKAPI",
+          "ATOM AYŞE",
+          "BOHEMIA",
+          "CAN AYLARA",
+          "AY ÇÖLÜ"
+        ],
+        "winner": "MERYEM SULTAN",
+        "hit": true
+      },
+      {
+        "race_no": 6,
+        "selection": [
+          "PERVARİ"
+        ],
+        "winner": "PERVARİ",
+        "hit": true
+      },
+      {
+        "race_no": 7,
+        "selection": [
+          "DÖRTNALBEYİ",
+          "DOĞAN KHAN"
+        ],
+        "winner": "ANADOLU GÜCÜ",
+        "hit": false
+      }
+    ]
+  },
+  {
+    "date": "14/01/2026",
+    "city": "Happy Valley Hong Kong",
+    "cost": 1.25,
+    "is_win": false,
+    "legs": [
+      {
+        "race_no": 4,
+        "selection": [
+          "Kapalı gözlük takılacağını ifade eder."
+        ],
+        "winner": "Kapalı gözlük takılacağını ifade eder.",
+        "hit": true
+      },
+      {
+        "race_no": 5,
+        "selection": [
+          "Kapalı gözlük takılacağını ifade eder."
+        ],
+        "winner": "Dilinin bağlanacağını ifade eder.",
+        "hit": false
+      },
+      {
+        "race_no": 6,
+        "selection": [
+          "Göz koruyucu takılacağını ifade eder."
+        ],
+        "winner": "Kulaklık takılacağını ifade eder.",
+        "hit": false
+      },
+      {
+        "race_no": 7,
+        "selection": [
+          "Kapalı gözlük takılacağını ifade eder."
+        ],
+        "winner": "Kapalı gözlük takılacağını ifade eder.",
+        "hit": true
+      },
+      {
+        "race_no": 8,
+        "selection": [
+          "Kapalı gözlük takılacağını ifade eder."
+        ],
+        "winner": "Unknown",
+        "hit": false
+      },
+      {
+        "race_no": 9,
+        "selection": [
+          "Kapalı gözlük takılacağını ifade eder."
+        ],
+        "winner": "Dilinin bağlanacağını ifade eder.",
+        "hit": false
+      }
+    ]
+  },
+  {
+    "date": "14/01/2026",
+    "city": "Launceston Avustralya",
+    "cost": 1.25,
+    "is_win": false,
+    "legs": [
+      {
+        "race_no": 3,
+        "selection": [
+          "Unknown"
+        ],
+        "winner": "Unknown",
+        "hit": true
+      },
+      {
+        "race_no": 4,
+        "selection": [
+          "Kapalı gözlük takılacağını ifade eder."
+        ],
+        "winner": "Unknown",
+        "hit": false
+      },
+      {
+        "race_no": 5,
+        "selection": [
+          "Unknown"
+        ],
+        "winner": "Unknown",
+        "hit": true
+      },
+      {
+        "race_no": 6,
+        "selection": [
+          "Unknown"
+        ],
+        "winner": "Unknown",
+        "hit": true
+      },
+      {
+        "race_no": 7,
+        "selection": [
+          "Unknown"
+        ],
+        "winner": "Unknown",
+        "hit": true
+      },
+      {
+        "race_no": 8,
+        "selection": [
+          "Unknown"
+        ],
+        "winner": "Unknown",
+        "hit": true
+      }
+    ]
+  },
+  {
+    "date": "14/01/2026",
+    "city": "Lingfield Birleşik Krallık",
+    "cost": 630.0,
+    "is_win": true,
+    "legs": [
+      {
+        "race_no": 3,
+        "selection": [
+          "CHAMAS",
+          "LADY DORA MAE",
+          "LOMA EXPRESS"
+        ],
+        "winner": "CHAMAS",
+        "hit": true
+      },
+      {
+        "race_no": 4,
+        "selection": [
+          "KARAKULA DANCER",
+          "GILES GLORY",
+          "LADY BIRGMA"
+        ],
+        "winner": "KARAKULA DANCER",
+        "hit": true
+      },
+      {
+        "race_no": 5,
+        "selection": [
+          "HARDSTYLE"
+        ],
+        "winner": "HARDSTYLE",
+        "hit": true
+      },
+      {
+        "race_no": 6,
+        "selection": [
+          "MICK'S SPIRIT",
+          "ALAFDHAL",
+          "GOGO YUBARI",
+          "HINT OF HUMOUR",
+          "FAUSTUS",
+          "BEAUMADIER",
+          "WOODHAY WHISPER"
+        ],
+        "winner": "MICK'S SPIRIT",
+        "hit": true
+      },
+      {
+        "race_no": 7,
+        "selection": [
+          "KRISSY",
+          "HAVEAGOBEAU"
+        ],
+        "winner": "HAVEAGOBEAU",
+        "hit": true
+      },
+      {
+        "race_no": 8,
+        "selection": [
+          "MAXIMISING",
+          "ME TARZAN",
+          "HOW IMPRESSIVE",
+          "CAPTAIN PARMA"
+        ],
+        "winner": "MAXIMISING",
+        "hit": true
+      }
+    ]
+  },
+  {
+    "date": "14/01/2026",
+    "city": "San Isidro Arjantin",
+    "cost": 1.25,
+    "is_win": true,
+    "legs": [
+      {
+        "race_no": 2,
+        "selection": [
+          "Unknown"
+        ],
+        "winner": "Unknown",
+        "hit": true
+      },
+      {
+        "race_no": 3,
+        "selection": [
+          "Unknown"
+        ],
+        "winner": "Unknown",
+        "hit": true
+      },
+      {
+        "race_no": 4,
+        "selection": [
+          "Unknown"
+        ],
+        "winner": "Unknown",
+        "hit": true
+      },
+      {
+        "race_no": 5,
+        "selection": [
+          "Unknown"
+        ],
+        "winner": "Unknown",
+        "hit": true
+      },
+      {
+        "race_no": 6,
+        "selection": [
+          "Unknown"
+        ],
+        "winner": "Unknown",
+        "hit": true
+      },
+      {
+        "race_no": 7,
+        "selection": [
+          "Unknown"
+        ],
+        "winner": "Unknown",
+        "hit": true
+      }
+    ]
+  },
+  {
+    "date": "14/01/2026",
+    "city": "Tampa Bay Downs ABD",
+    "cost": 720.0,
+    "is_win": true,
+    "legs": [
+      {
+        "race_no": 4,
+        "selection": [
+          "PASSIONED",
+          "PEACE CLOUD",
+          "SPEEDY HANS",
+          "ANCHISES",
+          "CONSPIRACY FACT",
+          "EVERDOIT"
+        ],
+        "winner": "PASSIONED",
+        "hit": true
+      },
+      {
+        "race_no": 5,
+        "selection": [
+          "MISSUS SEKI"
+        ],
+        "winner": "MISSUS SEKI",
+        "hit": true
+      },
+      {
+        "race_no": 6,
+        "selection": [
+          "BREAK OUT",
+          "THE BEST DISTANCE",
+          "CAPITAN DANNY"
+        ],
+        "winner": "BREAK OUT",
+        "hit": true
+      },
+      {
+        "race_no": 7,
+        "selection": [
+          "PROTEST",
+          "ALL THE LUCK"
+        ],
+        "winner": "PROTEST",
+        "hit": true
+      },
+      {
+        "race_no": 8,
+        "selection": [
+          "MISS CLASSIFIED",
+          "PADRINO'S GOLD",
+          "MEGANTHEEBATTALION",
+          "CHEERFUL TROUT"
+        ],
+        "winner": "MISS CLASSIFIED",
+        "hit": true
+      },
+      {
+        "race_no": 9,
+        "selection": [
+          "DEVELOP PRODUCT",
+          "DANZING MINER",
+          "DOUBLE ECHO",
+          "GO YOSHIDA"
+        ],
+        "winner": "DEVELOP PRODUCT",
+        "hit": true
+      }
+    ]
+  },
+  {
+    "date": "14/01/2026",
+    "city": "İstanbul  (4. Y.G.)",
+    "cost": 720.0,
+    "is_win": true,
+    "legs": [
+      {
+        "race_no": 2,
+        "selection": [
+          "MENKAR",
+          "KAREEM BUGHRA",
+          "LA MANO DE DİOS"
+        ],
+        "winner": "MENKAR",
+        "hit": true
+      },
+      {
+        "race_no": 3,
+        "selection": [
+          "MANGA PARBAT",
+          "TOZYUTTURAN"
+        ],
+        "winner": "MANGA PARBAT",
+        "hit": true
+      },
+      {
+        "race_no": 4,
+        "selection": [
+          "İNEBOLU",
+          "EDİZBARIŞ",
+          "AZERİ DAMAT",
+          "SANCAR",
+          "DEMİRKARDEŞLER",
+          "ROCK IRON"
+        ],
+        "winner": "İNEBOLU",
+        "hit": true
+      },
+      {
+        "race_no": 5,
+        "selection": [
+          "TURKISH PUNCH",
+          "ASLAN HALİLİM",
+          "HURRICANE HEART",
+          "POLPOO"
+        ],
+        "winner": "ASLAN HALİLİM",
+        "hit": true
+      },
+      {
+        "race_no": 6,
+        "selection": [
+          "AINT NOBODY",
+          "APOLLON"
+        ],
+        "winner": "AINT NOBODY",
+        "hit": true
+      },
+      {
+        "race_no": 7,
+        "selection": [
+          "ÖZGÜNBERK",
+          "BALDER"
+        ],
+        "winner": "ÖZGÜNBERK",
+        "hit": true
+      }
+    ]
+  },
+  {
+    "date": "14/01/2026",
+    "city": "Şanlıurfa  (4. Y.G.)",
+    "cost": 720.0,
+    "is_win": false,
+    "legs": [
+      {
+        "race_no": 3,
+        "selection": [
+          "HÜRADAM",
+          "ŞİMŞEK OĞLU"
+        ],
+        "winner": "ŞEŞENSULTANI",
+        "hit": false
+      },
+      {
+        "race_no": 4,
+        "selection": [
+          "METE KOÇ BEY",
+          "KING ANCESTOR"
+        ],
+        "winner": "METE KOÇ BEY",
+        "hit": true
+      },
+      {
+        "race_no": 5,
+        "selection": [
+          "KANEKONUN TORUNU",
+          "KING BATUR",
+          "TAKİPETBENİ",
+          "FREED",
+          "BOGOTA",
+          "KİNG İHSAN"
+        ],
+        "winner": "KING BATUR",
+        "hit": true
+      },
+      {
+        "race_no": 6,
+        "selection": [
+          "MAHMELEK",
+          "TUMBUL ÇİÇEĞİ",
+          "GAYECAN",
+          "CİNDERELLA",
+          "MİR SILASI",
+          "ÖZNİLAY"
+        ],
+        "winner": "ÖZNİLAY",
+        "hit": true
+      },
+      {
+        "race_no": 7,
+        "selection": [
+          "MR I MİRHAT"
+        ],
+        "winner": "UTKUN CAN",
+        "hit": false
+      },
+      {
+        "race_no": 8,
+        "selection": [
+          "DESERT FEVER",
+          "TRIPLE AZAREKS",
+          "ROTA SHOW",
+          "LONDON POWER"
+        ],
+        "winner": "TRIPLE AZAREKS",
+        "hit": true
+      }
+    ]
+  }
+]

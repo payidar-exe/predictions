@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="tr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#007a5c",
+                        "accent-gold": "#C29D46",
+                        "background-light": "#f3f3f1",
+                        "background-dark": "#111316",
+                        "card-dark": "#1D2024",
+                    },
+                    fontFamily: {
+                        "display": ["Epilogue", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .pro-card-gradient {
+            background: linear-gradient(145deg, #1D2024 0%, #15171a 100%);
+        }
+
+        .gold-glow {
+            text-shadow: 0 0 10px rgba(194, 157, 70, 0.4);
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-white selection:bg-primary/30">
+    <!-- Top Navigation Bar -->
+    <div class="fixed top-0 left-0 right-0 z-50 bg-background-dark/80 backdrop-blur-md border-b border-white/5">
+        <div class="flex items-center justify-between px-4 h-16 max-w-md mx-auto">
+            <div class="flex items-center gap-3">
+                <div class="size-10 rounded-full bg-gradient-to-tr from-primary to-accent-gold p-[2px]">
+                    <div
+                        class="w-full h-full rounded-full bg-background-dark flex items-center justify-center overflow-hidden">
+                        <img class="w-full h-full object-cover" data-alt="User profile avatar"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAx_5Tiphf0DfTYAVYyCnZ8Wzt2TpFpUziDVhjfmnZp9qFNo1G3Q_CuNajdL8w121mLmsbfPYg78G3nXJlvXupGQo6CwTINXJ0X0EOftWBsydJIE_jC_hcL7MeL9Bne3lQGocms4WyRuVOq0fbrQCw1ewEVWmucYSCJFk8TjCcmD-VVvJRzjAVnoPXHqkpTtZ6JoYFWM98RVTu_4p_5S8iDZ4ElAOVVYftJ41PftamYdapeZFn3mX3Kn9AqL0-SHufadB-_miuifQ" />
+                    </div>
+                </div>
+                <div>
+                    <p class="text-[10px] text-gray-400 font-medium uppercase tracking-wider">Merhaba</p>
+                    <p class="text-sm font-bold">Ahmet Yılmaz</p>
+                </div>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-full px-3 py-1.5 flex items-center gap-2">
+                <span class="material-symbols-outlined text-accent-gold text-[18px] gold-glow"
+                    style="font-variation-settings: 'FILL' 1">stars</span>
+                <span class="text-sm font-bold text-accent-gold tracking-tight">125 Yıldız</span>
+            </div>
+        </div>
+    </div>
+    <!-- Main Content Area -->
+    <main class="pt-20 pb-24 px-4 max-w-md mx-auto">
+        <!-- Header Section -->
+        <div class="py-6">
+            <h1 class="text-3xl font-bold tracking-tight text-white">Günün Tahminleri</h1>
+            <p class="text-gray-400 text-sm mt-1">Yapay zeka analizli at yarışı kuponları</p>
+        </div>
+        <!-- Section: Ücretsiz Kupon -->
+        <div class="mb-8">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-xs font-bold text-primary uppercase tracking-[0.2em]">Erişilebilir Kuponlar</h2>
+                <div class="h-[1px] flex-1 bg-primary/20 ml-4"></div>
+            </div>
+            <div
+                class="group relative bg-card-dark rounded-xl border border-primary/20 overflow-hidden shadow-2xl transition-all active:scale-[0.98]">
+                <div class="h-32 bg-center bg-cover relative" data-alt="Racing track overview in Istanbul"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBcT_yyxhcAEVQqwi-o9twN5IHL-o_6GZ8qhMIs-AnTFsD_FOQSLTTA2ot29sSFdytjgNEgspbjtlrQRKnCciJ0f1romnM8gMUP82DCwp5nt8YTTPXsdIPJHB2sqmTNV_42j-puc3xDQFoahjlwoMhcuXwJ8mFiyChvTuLRmORW0mvGNKUDXOkzF1jEZrUN48AFG6cggH_XXYf2RD2sp_8mGDVTNqI56pBdxMJblUq_BE6I8LZK8x1nxZTDfhxb7bLmxNlr3kXSWA");'>
+                    <div class="absolute inset-0 bg-gradient-to-t from-card-dark via-transparent"></div>
+                    <div
+                        class="absolute top-3 left-3 bg-primary text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-widest">
+                        Açık</div>
+                </div>
+                <div class="p-5">
+                    <div class="flex justify-between items-start mb-2">
+                        <div>
+                            <p class="text-[#8dcebe] text-[10px] font-bold uppercase">HERKESE AÇIK</p>
+                            <h3 class="text-xl font-bold text-white">Günün Banko Kuponu</h3>
+                        </div>
+                        <span class="material-symbols-outlined text-primary">verified</span>
+                    </div>
+                    <div class="flex items-center justify-between mt-4">
+                        <div class="flex items-center gap-2 text-gray-400">
+                            <span class="material-symbols-outlined text-[18px]">location_on</span>
+                            <p class="text-sm font-medium">İstanbul Veliefendi</p>
+                        </div>
+                        <button
+                            class="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-lg text-sm font-bold transition-colors">
+                            Kuponu Gör
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Section: Pro Kuponlar -->
+        <div class="space-y-6 mb-8">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-xs font-bold text-accent-gold uppercase tracking-[0.2em]">Premium Analizler</h2>
+                <div class="h-[1px] flex-1 bg-accent-gold/20 ml-4"></div>
+            </div>
+            <!-- Pro Card 1 -->
+            <div class="pro-card-gradient rounded-xl border border-white/5 overflow-hidden relative">
+                <div class="h-28 bg-center bg-cover opacity-30 grayscale blur-[2px]"
+                    data-alt="Abstract racing motion blur pattern"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDQMfGmQNtKTSib53UJaQ4S4qFoze4cp0Esq7HWHWS-lM0Agk1v63z-CvJOwQ1MIkDWB89vaQ1xx_CsQMwZtmvxjZcuSo7G4LN_QFB12PAMxVkPRVkvBafY68dwrV7JUetjzlz83pGAGITYklRaxvtabubD7LrgQfP9iWRifPHNOiR95dlx97WAYXZBsL82Qp3DmrQPz3EYweoyEbnzt5JkXdSJwVyWt_kAe9qOqXBJpjvq170shgcwTlaktPTN9qeYBRkqRZzbow");'>
+                </div>
+                <div
+                    class="absolute top-4 right-4 bg-accent-gold/10 border border-accent-gold/30 rounded-full px-2 py-1 flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[14px] text-accent-gold"
+                        style="font-variation-settings: 'FILL' 1">stars</span>
+                    <span class="text-[10px] font-bold text-accent-gold uppercase">Pro</span>
+                </div>
+                <div class="p-5 pt-2">
+                    <div class="flex flex-col gap-1 mb-6">
+                        <p class="text-accent-gold/80 text-[10px] font-bold uppercase tracking-widest">YÜKSEK GANYAN</p>
+                        <h3 class="text-lg font-bold text-white">Sürpriz Analiz Paketi</h3>
+                        <p class="text-gray-500 text-xs">Ankara 75. Yıl Hipodromu • 21:00</p>
+                    </div>
+                    <div
+                        class="relative flex items-center justify-center py-4 bg-white/[0.02] rounded-lg border border-white/[0.05] mb-4 group cursor-pointer transition-all active:scale-[0.98]">
+                        <div class="flex flex-col items-center gap-2">
+                            <span class="material-symbols-outlined text-accent-gold text-3xl">lock</span>
+                            <p class="text-sm font-bold text-white">İçeriği Görmek İçin Kilidi Aç</p>
+                        </div>
+                    </div>
+                    <button
+                        class="w-full bg-accent-gold hover:bg-accent-gold/90 text-background-dark py-3 rounded-lg font-bold flex items-center justify-center gap-2 transition-all">
+                        <span>50 Yıldız ile Hemen Aç</span>
+                        <span class="material-symbols-outlined text-[20px]">bolt</span>
+                    </button>
+                </div>
+            </div>
+            <!-- Pro Card 2 -->
+            <div class="pro-card-gradient rounded-xl border border-white/5 overflow-hidden relative">
+                <div class="h-28 bg-center bg-cover opacity-30 grayscale blur-[2px]"
+                    data-alt="Bursa Osmangazi racetrack abstract view"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCK6bPHQJ0X0rod7IFyjWwGRHym_L6xYjrux5UW5RYcqhfWnEfqseUcd4u7FB0GHQ7ggpslUiUshRo8kRKLXOjYPokwM2gXJ-F5Y6kiISu6ycO3LyN_Q1PYFl_tGBZ1mn_6R8nehxZVfAzrlbL1VxDqRDAkNcVhwZIwN7PCSNFCkCzzNgj5_ZaNnUdRDw7kRD5VW4eZFwA-LagTwcf0kdqVc6DR0YO229efUx8_3-FySy9Unm97xpm0O-c859HA-bl4dP79DrMlFA");'>
+                </div>
+                <div
+                    class="absolute top-4 right-4 bg-accent-gold/10 border border-accent-gold/30 rounded-full px-2 py-1 flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[14px] text-accent-gold"
+                        style="font-variation-settings: 'FILL' 1">stars</span>
+                    <span class="text-[10px] font-bold text-accent-gold uppercase">Pro</span>
+                </div>
+                <div class="p-5 pt-2">
+                    <div class="flex flex-col gap-1 mb-6">
+                        <p class="text-accent-gold/80 text-[10px] font-bold uppercase tracking-widest">ÖZEL ANALİZ</p>
+                        <h3 class="text-lg font-bold text-white">Bursa Altılısı Tahmini</h3>
+                        <p class="text-gray-500 text-xs">Bursa Osmangazi • 18:30</p>
+                    </div>
+                    <div
+                        class="relative flex items-center justify-center py-4 bg-white/[0.02] rounded-lg border border-white/[0.05] mb-4">
+                        <div class="flex flex-col items-center gap-2 opacity-60">
+                            <span class="material-symbols-outlined text-accent-gold text-3xl">lock</span>
+                            <p class="text-sm font-bold text-white">50 Yıldız</p>
+                        </div>
+                    </div>
+                    <button
+                        class="w-full bg-primary hover:bg-primary/90 text-white py-3 rounded-lg font-bold flex items-center justify-center gap-2 transition-all">
+                        <span>Kuponu Aktif Et</span>
+                        <span class="material-symbols-outlined text-[20px]">shopping_cart</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Bottom Navigation Bar (iOS Style) -->
+    <nav
+        class="fixed bottom-0 left-0 right-0 bg-background-dark/95 backdrop-blur-xl border-t border-white/5 pb-8 pt-3 px-6 z-50">
+        <div class="max-w-md mx-auto flex items-center justify-between">
+            <a class="flex flex-col items-center gap-1 text-primary" href="#">
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">home</span>
+                <span class="text-[10px] font-bold uppercase tracking-tighter">Ana Sayfa</span>
+            </a>
+            <a class="flex flex-col items-center gap-1 text-gray-500" href="#">
+                <span class="material-symbols-outlined">analytics</span>
+                <span class="text-[10px] font-bold uppercase tracking-tighter">İstatistik</span>
+            </a>
+            <div class="relative -top-6">
+                <div
+                    class="size-14 bg-primary rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,122,92,0.4)] border-4 border-background-dark active:scale-90 transition-transform">
+                    <span class="material-symbols-outlined text-white text-3xl">add</span>
+                </div>
+            </div>
+            <a class="flex flex-col items-center gap-1 text-gray-500" href="#">
+                <span class="material-symbols-outlined">account_balance_wallet</span>
+                <span class="text-[10px] font-bold uppercase tracking-tighter">Cüzdan</span>
+            </a>
+            <a class="flex flex-col items-center gap-1 text-gray-500" href="#">
+                <span class="material-symbols-outlined">person</span>
+                <span class="text-[10px] font-bold uppercase tracking-tighter">Profil</span>
+            </a>
+        </div>
+    </nav>
+</body>
+
+</html>

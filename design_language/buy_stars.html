@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="tr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#007a5c",
+                        "accent-gold": "#C29D46",
+                        "background-light": "#f3f3f1",
+                        "background-dark": "#121416",
+                        "card-dark": "#1D2024",
+                    },
+                    fontFamily: {
+                        "display": ["Epilogue", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .gold-shimmer {
+            background: linear-gradient(135deg, #C29D46 0%, #E5C16C 50%, #C29D46 100%);
+        }
+
+        .ios-blur {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-white min-h-screen">
+    <!-- Top Navigation Bar -->
+    <div
+        class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 ios-blur border-b border-gray-200 dark:border-gray-800">
+        <div class="flex items-center p-4 justify-between max-w-md mx-auto">
+            <div class="flex items-center gap-2">
+                <span
+                    class="material-symbols-outlined text-gray-600 dark:text-gray-300 cursor-pointer">arrow_back_ios</span>
+                <h2 class="text-lg font-bold tracking-tight">Yıldız Mağazası</h2>
+            </div>
+            <div
+                class="flex items-center gap-1.5 bg-gray-200 dark:bg-gray-800 px-3 py-1 rounded-full border border-gray-300 dark:border-gray-700">
+                <span class="material-symbols-outlined text-accent-gold text-sm"
+                    style="font-variation-settings: 'FILL' 1">stars</span>
+                <span class="text-sm font-bold">12</span>
+            </div>
+        </div>
+    </div>
+    <div class="max-w-md mx-auto pb-10">
+        <!-- Header Section -->
+        <div class="px-4 pt-8 pb-4">
+            <h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">Yıldız Paketi Seç</h1>
+            <p class="text-gray-500 dark:text-gray-400 mt-2 text-sm leading-relaxed">
+                Pro tahminlere ve özel kuponlara erişmek için yıldız bakiyenizi hemen güncelleyin.
+            </p>
+        </div>
+        <!-- Store Cards -->
+        <div class="flex flex-col gap-4 px-4 mt-4">
+            <!-- Standard Package -->
+            <div class="relative group">
+                <div
+                    class="flex items-center justify-between gap-4 rounded-xl bg-white dark:bg-card-dark p-5 border border-gray-200 dark:border-gray-800 shadow-sm transition-all hover:border-primary/50">
+                    <div class="flex flex-col gap-4 flex-1">
+                        <div class="flex flex-col gap-1">
+                            <div class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-accent-gold"
+                                    style="font-variation-settings: 'FILL' 1">stars</span>
+                                <p class="text-xl font-bold">100 Yıldız</p>
+                            </div>
+                            <p class="text-gray-500 dark:text-gray-400 text-sm font-medium">Başlangıç Paketi</p>
+                        </div>
+                        <div class="flex items-center justify-between mt-2">
+                            <span class="text-2xl font-bold text-primary">49 TL</span>
+                            <button
+                                class="flex items-center justify-center rounded-lg h-10 px-6 bg-primary text-white text-sm font-bold transition-transform active:scale-95 shadow-lg shadow-primary/20">
+                                Hemen Al
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Popular Package -->
+            <div class="relative group">
+                <!-- Popular Badge -->
+                <div
+                    class="absolute -top-3 right-6 z-10 gold-shimmer text-black text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest shadow-lg">
+                    En Popüler
+                </div>
+                <div
+                    class="flex items-center justify-between gap-4 rounded-xl bg-white dark:bg-card-dark p-5 border-2 border-accent-gold shadow-[0_0_20px_rgba(194,157,70,0.15)] transition-all">
+                    <div class="flex flex-col gap-4 flex-1">
+                        <div class="flex flex-col gap-1">
+                            <div class="flex items-center gap-2">
+                                <div class="flex -space-x-1">
+                                    <span class="material-symbols-outlined text-accent-gold"
+                                        style="font-variation-settings: 'FILL' 1">stars</span>
+                                    <span class="material-symbols-outlined text-accent-gold"
+                                        style="font-variation-settings: 'FILL' 1">stars</span>
+                                </div>
+                                <p class="text-xl font-bold">250 Yıldız</p>
+                            </div>
+                            <p class="text-accent-gold/80 text-sm font-medium">Avantajlı Paket</p>
+                        </div>
+                        <div class="flex items-center justify-between mt-2">
+                            <span class="text-2xl font-bold text-primary">99 TL</span>
+                            <button
+                                class="flex items-center justify-center rounded-lg h-10 px-6 bg-primary text-white text-sm font-bold transition-transform active:scale-95 shadow-lg shadow-primary/20">
+                                Hemen Al
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Premium Package -->
+            <div class="relative group">
+                <div
+                    class="flex items-center justify-between gap-4 rounded-xl bg-white dark:bg-card-dark p-5 border border-gray-200 dark:border-gray-800 shadow-sm transition-all hover:border-primary/50">
+                    <div class="flex flex-col gap-4 flex-1">
+                        <div class="flex flex-col gap-1">
+                            <div class="flex items-center gap-2">
+                                <div class="flex -space-x-1">
+                                    <span class="material-symbols-outlined text-accent-gold"
+                                        style="font-variation-settings: 'FILL' 1">stars</span>
+                                    <span class="material-symbols-outlined text-accent-gold"
+                                        style="font-variation-settings: 'FILL' 1">stars</span>
+                                    <span class="material-symbols-outlined text-accent-gold"
+                                        style="font-variation-settings: 'FILL' 1">stars</span>
+                                </div>
+                                <p class="text-xl font-bold">500 Yıldız</p>
+                            </div>
+                            <p class="text-gray-500 dark:text-gray-400 text-sm font-medium">Pro Oyuncu Paketi</p>
+                        </div>
+                        <div class="flex items-center justify-between mt-2">
+                            <span class="text-2xl font-bold text-primary">179 TL</span>
+                            <button
+                                class="flex items-center justify-center rounded-lg h-10 px-6 bg-primary text-white text-sm font-bold transition-transform active:scale-95 shadow-lg shadow-primary/20">
+                                Hemen Al
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Trust Section -->
+        <div class="mt-12 px-4 text-center">
+            <div
+                class="flex flex-col items-center gap-4 py-6 rounded-2xl bg-gray-50 dark:bg-gray-800/30 border border-gray-200 dark:border-gray-800/50">
+                <div class="flex items-center gap-2 text-gray-500 dark:text-gray-400">
+                    <span class="material-symbols-outlined text-sm">lock</span>
+                    <p class="text-xs font-medium uppercase tracking-widest">256-bit SSL Güvenli Ödeme</p>
+                </div>
+                <div class="flex items-center gap-6 grayscale opacity-60">
+                    <div class="w-10 h-6 bg-center bg-contain bg-no-repeat" data-alt="Visa logo for secure payment"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAgen4_cdbpJycxAxYdQYQfpoj2KTt29ur3ZkAdzvtTVFh86m1YWs5ujh8GL_I7k-71s9MYF4jsZEmOFiMa_rY6XE4CWmW212oNQ58XO4RcJfoGEsTF2bg6HmMVkRRGCHWnBG6FIj2IFc97vF2CARq_tgBz-XzwSJJy45CiXvIJ0z5_xVscSCo1Cn9YnIklSKR1UHKvIXEY0znoQiBvkl9uZa9b5PzJTZKPD2SEhlHwhWFEvQ8AOgSyO2hzPCoQxx4Wr5Tjt3vyrw')">
+                    </div>
+                    <div class="w-10 h-6 bg-center bg-contain bg-no-repeat"
+                        data-alt="Mastercard logo for secure payment"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAE1OzzQe3Z_h-PvVUgSYNS_OPujJxv66eTk4C0Xqu9Gy-WxYc3SFE9ux1eSmcsSOwTJKFFqIgXKeYPk20kx4BLPOgi9H2LdBmtzUcXKE4QxMYJTQCRJRxDQeg__NL5WJhftFVAn7o3dsBYwlBC26OV_yq3oW2_4nyxCLN6eph-Jgk72YvrtfuD3er_NzrADSXIk6TXUQkSYD2TJnZPFR-3qZUI3C1GPoCvyh5Lx0Mjj141sGIKznQNByYjnRP2x4cChdCmg3wbrg')">
+                    </div>
+                    <div class="w-12 h-6 bg-center bg-contain bg-no-repeat" data-alt="Paypal logo for secure payment"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAyzWRSTVP7NrMLTvoYfYninCnaYA2bks5yeiNum78rG0fEE0QqrL6aHoBWkb2yaYIUCRDkDD22YZKFgHgMHa67Eqd8Ydbj6RrkkS-fOg1k8nVS1Zs2o8cURzshKdt-UxRWJkRWM_ZN_X1UDjPUMWXHVB04jTiG5cz6d2SX-37pTde0NP4pNL_l1GrZpISjwdBmZGSgi-fhhCsZkdAGzA4qr_aRzztw8n-nt3pbLlYHm730jL0EErXzWrHr6ZnorozE2_-SRT5_yg')">
+                    </div>
+                </div>
+                <p class="text-[10px] text-gray-400 dark:text-gray-600 px-6 leading-tight">
+                    Ödemeleriniz App Store üzerinden güvenli bir şekilde gerçekleştirilir. Abonelik veya tek seferlik
+                    alımlarda iptal politikamız geçerlidir.
+                </p>
+            </div>
+        </div>
+        <!-- Bottom Spacing for iOS Home Indicator -->
+        <div class="h-10"></div>
+    </div>
+</body>
+
+</html>
