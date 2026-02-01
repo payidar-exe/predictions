@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { useAuthStore } from './stores';
 import { supabase } from './lib/supabase';
 import { AuthGuard } from './components/AuthGuard';
+import { initializeAdMob } from './lib/admob';
+import { initializeRevenueCat } from './lib/revenuecat';
 
 // Pages
 import { HomePage } from './pages/HomePage';
@@ -31,6 +33,10 @@ function App() {
   useEffect(() => {
     // Initial fetch
     fetchProfile();
+
+    // Initialize Native Services
+    initializeAdMob();
+    initializeRevenueCat();
 
     // Listen for auth changes (login/logout/token refresh)
     const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, _session) => {
